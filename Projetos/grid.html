@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testes de componentes</title>
+    </head>
+
+    <body>
+        <div class="rect"style="--bg: #123 ;--r: 0; --c: 0"></div>
+        <div class="rect"style="--bg: #0A2 ;--r: 1; --c: 2"></div>
+        <div class="rect"style="--bg: #245 ;--r: 2; --c: 1"></div>
+        <div class="rect"style="--bg: #222 ;--r: 3; --c: 4"></div>
+        <div class="rect"style="--bg: #0F0 ;--r: 4; --c: 2"></div>
+
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins';
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3,1fr);
+                overflow: hidden;
+            }
+
+            .rect {
+                width: 100%;
+                height: 100%;
+                background-color: var(--bg);
+            }
+            .rect:nth-child(1){
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+            .rect:nth-child(2){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            .rect:nth-child(3){
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            .rect:nth-child(4){
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+        </style>
+    </body>
+
+</html>

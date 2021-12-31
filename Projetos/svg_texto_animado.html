@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Texto Animado</title>
+</head>
+<body>
+    <div class="container">
+        <svg viewBox="0 0 1000 400">
+            <text id="mytext" x="50%" y="50%" text-anchor="middle" fill="none">Bruno</text>
+            <use xlink:href="#mytext" class="copy copy1"></use>
+            <use xlink:href="#mytext" class="copy copy2"></use>
+            <use xlink:href="#mytext" class="copy copy3"></use>
+            <use xlink:href="#mytext" class="copy copy4"></use>
+        </svg>
+    </div>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins";
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: rgb(0, 0, 0);
+        }
+        svg{
+            font-size: 150px;
+            padding-top: 11%;
+        }
+        .copy{
+            fill: none;
+            stroke: #FFF;
+            stroke-width: 3px;
+            stroke-dasharray: 5% 30%;
+            animation: textanimation 6s linear infinite;
+        }
+        use[class~="copy1"]{
+            stroke: rgb(152, 243, 5);
+            animation-delay: -1s;
+        }
+        use[class~="copy2"]{
+            stroke: rgb(5, 156, 243);
+            animation-delay: -2s;
+        }
+        use[class~="copy3"]{
+            stroke: rgb(243, 5, 5);
+            animation-delay: -3s;
+        }
+        use[class~="copy4"]{
+            stroke: rgb(0, 250, 104);
+            animation-delay: -4s;
+        }
+        @keyframes textanimation{
+            100%{
+                stroke-dashoffset: -35%;
+            }
+        }
+    </style>
+</body>
+</html>

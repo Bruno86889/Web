@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="cube">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+    </div>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins';
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+        }
+        .cube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg);
+            animation: animate 4s linear infinite;
+
+        }
+       
+        .cube div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        .cube div span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(red,rgb(255, 217, 0));
+            transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+        }
+        .top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: red;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .bottom{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background: rgb(255, 217, 0);
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        
+    </style>
+    
+    <script>
+        const cube = document.querySelector(".cube")
+        window.addEventListener("click",()=>{ 
+            cube.style.transform = "rotateY(10deg)"
+        })
+    </script>
+</body>
+</html>

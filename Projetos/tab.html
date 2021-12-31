@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabs</title>
+    </head>
+
+    <body>
+        <ul class="tab">
+            <li class="item active">Paris</li>
+            <li class="item">Londres</li>
+            <li class="item">Tokio</li>
+            <li class="item">Nova York</li>
+        </ul>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'poppins';
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .tab {
+                width: 100%;
+                height: 50px;
+                display: flex;
+            }
+
+            .item {
+                width: 100px;
+                list-style: none;
+                height: 50px;
+                text-align: left;
+                padding: 2px 5px;
+                background-color: rgb(255, 244, 244);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.6s;
+                user-select: none;
+            }
+
+            .item[class~="active"],
+            .item:hover {
+                background-color: rgb(81, 136, 27);
+            }
+        </style>
+
+        <script>
+            const tabItems = document.querySelectorAll(".item")
+
+            tabItems.forEach(e => {
+                console.log(e.className);
+            })
+               function hello() {
+                console.log("hello");
+               }
+           
+        </script>
+    </body>
+
+</html>

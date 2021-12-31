@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search bar</title>
+</head>
+<body>
+    <div id="search" class="search-container disabled">
+        <div class="icon">
+            <input type="radio" name="radio" id="radio">
+            <i id="search" class="fas fa-search" onclick="change()"></i>
+        </div>
+        <div class="input">
+            <input list="options" type="text" name="search" id="search">
+
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins';
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: wheat;
+        }
+        .search-container{
+            width: max-content;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 3px 4px 3px rgba(0, 0, 0, 0.11);
+            background-color: white;
+            border-radius: 15px;
+            transition: 1s;
+        }
+        .search-container input[type="radio"]{
+            display: none;
+        }
+        .search-container .icon{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .search-container .icon i{
+           display: flex;
+           align-self: center;
+           font-size: 18pt;
+        }
+        .search-container .input{
+            width: 250px;
+            height: inherit;
+            display: flex;
+        }
+        .search-container .input input{
+            width: 100%;
+            height:100%;
+            border: none;
+            overflow: hidden;
+            cursor: pointer;
+            padding: 0 5px;
+            outline: none;
+            font-size: 13pt;
+            /*caret-color: transparent;*/
+        }
+        .search-container .input i{
+            width: 50px;
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18pt;
+        }
+        .search-container .input i::before{
+            cursor: pointer;
+        }
+
+        .search-container[class~="disabled"]{
+            background-color: black;
+            box-shadow: none;
+        }
+        .search-container[class~="disabled"] .icon i{
+            cursor: pointer;
+        }
+        .search-container[class~="disabled"] .input{
+            display: none;
+        }
+        .search-container[class~="disabled"] .icon i{
+            color: white;
+        }
+    </style>
+
+    <script>
+        function change() {
+           const radio = document.getElementById("radio")
+           const search = document.getElementById("search")
+           if (!radio.checked) {
+            radio.checked = true      
+           }else{
+               radio.checked = false
+           }
+           if (radio.checked) {
+            search.className = search.className.replace("disabled","")
+           }else{
+            search.className = search.className.concat(" disabled")
+           }
+
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a222d5ef66.js" crossorigin="anonymous"></script>
+</body>
+</html>
