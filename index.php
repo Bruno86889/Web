@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Projetos</title>
 </head>
+
 <body>
     <h2>Meus Projetos</h2>
     <ul class="list-files">
-        <li class="item"><a href="/Projetos/01.html" target="_blank" rel="noopener noreferrer">SVG Texto Animado</a></li>
+        <?php
+        $path = "./Projetos/";
+        $files = scandir($path);
+        foreach ($files as $key => $value) {
 
-        <li class="item"><a href="/Projetos/slideshow.html" target="_blank" rel="noopener noreferrer">Slideshow</a></li>
-        
-        <li class="item"><a href="/Projetos/dropdown.html" target="_blank" rel="noopener noreferrer">Dropdown</a></li>
+            $name = basename($value,".html");
 
+            if ($value != "." and $value != "..") {
+                echo "<li class='item'><a href='{$path}{$value}' target='_blank' rel='noopener noreferrer'>$name</a></li>";
+            }
+           
+        }?>
     </ul>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'poppins';
             font-weight: normal;
         }
-        .list-files{
+
+        .list-files {
             margin-left: 50px;
             list-style-type: circle;
         }
-        .list-files a{
+
+        .list-files a {
             text-decoration: none;
             text-transform: capitalize;
         }
-        .list-files a:hover{
+
+        .list-files a:hover {
             text-decoration: underline;
         }
     </style>
     <script src="https://kit.fontawesome.com/a222d5ef66.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

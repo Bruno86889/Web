@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SVG</title>
+    </head>
+
+    <body>
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <circle cx="50" cy="50" r="20" stroke="red" fill="yellow"
+                stroke-width="2"></circle>
+        </svg>
+
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <rect width="30" height="30" fill="red" x="25" y="25"></rect>
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <ellipse cx="50" cy="50" rx="30" ry="15" fill="red"></ellipse>
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <line x1="0" y1="0" x2="100" y2="100" stroke="black"
+                stroke-width="2"></line>
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <polygon points="0,0 100,20 30,40 50,50 70,40" fill="blue">
+            </polygon>
+
+            <!-- (x,y)  css: fill-rule fill stroke stroke-width-->
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <polyline points="0,0 20,20 30,50, 50,20" stroke="blue" fill="none">
+            </polyline>
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <path d="M0 0 Q10 80 80 50 Q0 0 50 50 Z" stroke="blue"
+                stroke-width="2"></path>
+            <!--M moveto
+    L lineto
+H horizontal lineto
+V vertical lineto
+C curveto
+S smooth curveto
+Q quadratic bézier curveto
+T smooth quadratic bézier curveto
+A eliptical arc
+Z closepath
+
+#Comandos com letra minuscula significa posição relativa-->
+        </svg>
+
+        <svg width="100" height="100" style="border: 1px solid black;">
+            <text x="20" y="50" font-size="10pt">Love SVG</text>
+        </svg>
+
+        <svg width="100" height="100">
+            <defs>
+                <filter id="f1" x="0" y="0">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="1">
+                    </feGaussianBlur>
+                </filter>
+            </defs>
+
+            <circle cx="50" cy="50" r="20" fill="green" filter="url(#f1)">
+            </circle>
+        </svg>
+
+
+        <!--<feBlend> - filter for combining images
+<feColorMatrix> - filter for color transforms
+<feComponentTransfer>
+<feComposite>
+<feConvolveMatrix>
+<feDiffuseLighting>
+<feDisplacementMap>
+<feFlood>
+<feGaussianBlur>
+<feImage>
+<feMerge>
+<feMorphology>
+<feOffset> - filter for drop shadows
+<feSpecularLighting>
+<feTile>
+<feTurbulence>
+<feDistantLight> - filter for lighting
+<fePointLight> - filter for lighting
+<feSpotLight> - filter for lighting
+    
+<feOffset> 
+    -->
+
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:krita="http://krita.org/namespaces/svg/krita"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+            width="100" height="100" viewBox="0 0 1190.4 841.92">
+            <defs />
+            <path id="shape0"
+                transform="translate(501.239695647299, 186.147496627542)"
+                fill="#000000" fill-rule="evenodd" stroke="#000000"
+                stroke-width="0.96" stroke-linecap="square"
+                stroke-linejoin="bevel"
+                d="M15.0003 36.4525C32.4803 36.3125 49.27 35.8274 67.4403 36.0325C69.1094 36.0327 67.5892 30.7682 67.5603 28.1125C67.4153 14.7842 58.368 5.12287 45.4921 1.25961C38.9062 1.31319 38.4406 -1.99016 19.5603 1.89251C0.680047 5.77518 0.0779345 25.0519 0.000323301 37.6525C-0.0370446 43.7194 3.17024 52.7948 6.84033 56.3725C12.0049 61.4071 14.605 63.3559 22.3203 65.1325C26.8742 66.1811 39.0905 67.1406 49.3203 63.3325C64.5243 57.6728 64.1606 52.3927 67.2003 42.8125C63.3823 42.6994 64.9728 42.8133 55.5645 42.8703C56.4945 45.1126 53.7466 53.4004 45.9603 54.2125C37.828 55.0607 29.6259 56.7452 25.4403 54.8125C21.2547 52.8798 19.417 52.1713 17.8203 49.7725C15.4139 46.157 13.1157 43.0541 15.0003 36.4525" />
+
+
+            <path id="shape1"
+                transform="translate(519.076566111124, 201.240008280579)"
+                fill="none" stroke="#000000" stroke-width="0.96"
+                stroke-linecap="square" stroke-linejoin="bevel"
+                d="M0.283455 9C-0.766557 9 1.39724 1.13244 1.96346 0" />
+            <path id="shape2"
+                transform="translate(516.72002126188, 195.602530689063)"
+                d="M0 18.7175C14.542 18.9365 30.5136 18.8449 42.24 18.7175C38.2842 5.25058 30.1242 -0.949416 17.76 0.117477C4.36697 3.14505 1.55577 7.24951 0 18.7175Z" />
+        </svg>
+
+        <svg width="100" height="100" viewBox="0 0 16 22" version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB" id="filter_1">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic"
+                        in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dx="2" dy="0" />
+                    <feGaussianBlur stdDeviation="1.5" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1"
+                        k3="1" />
+                    <feColorMatrix type="matrix"
+                        values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.49803922 0" />
+                    <feBlend mode="normal" in2="shape"
+                        result="effect0_innerShadow" />
+                </filter>
+                <path
+                    d="M5.01486 2.06242C17.4586 -5.72821 9.5148 11.0624 9.5148 11.0624C9.5148 11.0624 16.0175 15.2153 15.5149 17.5625C15.0122 19.9096 8.05829 22.7766 5.01486 21.0625C1.97144 19.3483 6.51477 14.0624 6.51477 14.0624C6.51477 14.0624 -0.360199 10.5625 0.014801 7.56245C0.389801 4.56245 4.84369 2.18503 5.01486 2.06242"
+                    id="path_1" />
+            </defs>
+            <g id="shape">
+                <use stroke="none" fill="#808080" xlink:href="#path_1"
+                    fill-rule="evenodd" filter="url(#filter_1)" />
+            </g>
+        </svg>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'poppins';
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+            *:hover{
+                stroke: blue;
+                stroke-width: 10px;
+            }
+            /*
+        stroke
+        stroke-width
+        stroke-linecap: define o formato do fim de um caminho
+
+        stroke-dasharray: define o formato do pincel
+        */
+        </style>
+    </body>
+
+</html>
