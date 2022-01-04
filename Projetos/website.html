@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#inicial">logo</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <article id="inicial"></article>
+        <article id="galeria"></article>
+        <article id="eventos"></article>
+        <article id="sobre"></article>
+        <article id="contato"></article>
+    </main>
+    <footer>
+
+    </footer>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins';
+        }
+        :root{
+            --c1: #A3390F;
+            --c2: #FF7B47;
+            --c3: #F0642C;
+            --c4: #00A388;
+            --c5: #2BF0CF;
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100%;
+            zoom: unset;
+            overscroll-behavior: none;
+        }
+        article{
+            width: 100vw;
+            height: 100vh;
+        }
+        nav{
+            width: 100vw;
+            height: 50px;
+            background-color: var(--c4);
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a:first-of-type{
+            left: 10px;
+            position: absolute;
+
+        }
+        nav a{
+            height: max-content;
+            width: max-content;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-size: 10pt;
+            padding: 10px 15px;
+            margin-right: 10px;
+        }
+        nav a:last-of-type{
+            margin-right: 0px;
+        }
+        article:nth-child(1){
+            background-color: var(--c2);
+        }
+        article:nth-child(2){
+            background-color: var(--c3);
+        }
+        article:nth-child(3){
+            background-color: var(--c4);
+        }
+        article:nth-child(4){
+            background-color: var(--c5);
+        }
+        article:nth-child(5){
+            background-color: var(--c1);
+        }
+    </style>
+</body>
+</html>
