@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="5px" height="20px" viewBox="0 0 5 20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <g id="more">
-    <path d="M0 2.38095C0 1.06599 1.06599 0 2.38095 0C3.69592 0 4.7619 1.06599 4.7619 2.38095C4.7619 3.69592 3.69592 4.7619 2.38095 4.7619C1.06599 4.7619 0 3.69592 0 2.38095Z" id="Ellipse" fill="#000000" fill-rule="evenodd" stroke="none" />
-    <path d="M0 10C0 8.68504 1.06599 7.61905 2.38095 7.61905C3.69592 7.61905 4.7619 8.68504 4.7619 10C4.7619 11.315 3.69592 12.381 2.38095 12.381C1.06599 12.381 0 11.315 0 10Z" id="Ellipse-2" fill="#000000" fill-rule="evenodd" stroke="none" />
-    <path d="M0 17.6191C0 16.3041 1.06599 15.2381 2.38095 15.2381C3.69592 15.2381 4.7619 16.3041 4.7619 17.6191C4.7619 18.934 3.69592 20 2.38095 20C1.06599 20 0 18.934 0 17.6191Z" id="Ellipse-3" fill="#000000" fill-rule="evenodd" stroke="none" />
-  </g>
-</svg>

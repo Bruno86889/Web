@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button Ripple</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <button>Clique em mim</button>
+            <button><div class="camada">Clique em mim <span></span></div></button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>
+                <div class="glass">Clique em mim</div>
+            </button>
+            <button>Clique em mim</button>
+            <button><div class="camada">Clique em mim <span></span></div>
+            </button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+            <button>Clique em mim</button>
+
+        </div>
+
+        <style>
+            @import url("../css/main.css");
+
+            .container {
+                background-image: url("../assets/img/img4.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                min-height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                background-color: rgb(255, 177, 177);
+            }
+            @media only screen and (max-width:700px) {
+                .container{
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+            button {
+                width: 200px;
+                height: 40px;
+                margin-right: 10px;
+                /* padding: 10px 20px; */
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+                user-select: none;
+                overflow: hidden;
+            }
+
+            button:nth-child(1) {
+                background-color: black;
+                color: white;
+                letter-spacing: 3px;
+            }
+
+
+            button:nth-child(2) {
+                background-color: transparent;
+                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.212), -3px -3px 6px rgba(255, 255, 255, 0.342);
+                display: flex;
+            }
+            button:nth-child(2) .camada{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 300px;
+                height: 40px;
+                overflow: hidden;
+                letter-spacing: 3px;
+                backdrop-filter: blur(5px);
+            }
+            button:nth-child(2) .camada span{
+                width: 0px;
+                background-color: transparent;
+                height: 90px;
+                position: absolute;
+                display: inline;
+                transform: rotate(-45deg);
+                left: -100px;
+                transition: 0.7s;
+                box-shadow: 1px 0px 40px 5px rgba(255, 255, 255, 0.562);
+            }
+            button:nth-child(2):hover .camada span{
+                left: 120%;
+            }
+
+
+            button:nth-child(3) {
+                border-radius: 20px;
+                background: linear-gradient(45deg, #131c84, #8278da);
+                background-size: 200% 200%;
+                color: rgba(255, 255, 255, 0.842);
+                letter-spacing: 2px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.178);
+                transition: 1s;
+            }
+
+            button:nth-child(3):hover{
+                background-position: 100% 0%;
+            }
+
+
+            button:nth-child(4) {
+                background: linear-gradient(15deg, blue, yellow);
+                color: white;
+                letter-spacing: 4px;
+                background-size: 100% 200%;
+                transition: 1s;
+            }
+            button:nth-child(4):hover{
+                background-position: 100% 100%;
+            }
+
+
+            button:nth-child(5) {
+                background-color: yellow;
+                box-shadow: 5px 5px black;
+                letter-spacing: 2px;
+                font-weight: 600;
+            }
+
+            button:nth-child(6) {
+                background-color: transparent;
+                box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.212), inset -3px -3px 6px rgba(255, 255, 255, 0.342);
+                letter-spacing: 3px;
+            }
+
+            button:nth-child(7) {
+                border-radius: 20px;
+                background-color: blue;
+                box-shadow: inset -4px -4px 8px 2px rgba(255, 255, 255, 0.377);
+                color: white;
+                letter-spacing: 2px;
+            }
+
+            button:nth-child(8) {
+                background: repeating-linear-gradient(35deg, blue, red);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            button:nth-child(8) .glass {
+                height: 40px;
+                width: 200px;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.418);
+                backdrop-filter: blur(80px);
+                -webkit-backdrop-filter: blur(80px);
+                opacity: 0.5;
+                transition: 0.4s;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                letter-spacing: 3px;
+            }
+
+            button:nth-child(8):hover .glass {
+                opacity: 0.9;
+                background-color: rgba(255, 255, 255, 0.164);
+            }
+
+            button:nth-child(9) {
+                border: 5px solid blue;
+                border-bottom: none;
+                border-top: none;
+                letter-spacing: 4px;
+                background: violet;
+                color: white;
+                overflow: hidden;
+            }
+
+
+            button:nth-child(10){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button:nth-child(10) .camada{
+                background: rgb(255, 0, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 300px;
+                height: 40px;
+                overflow: hidden;
+                color: white;
+                letter-spacing: 3px;
+            }
+            button:nth-child(10) .camada span{
+                width: 0px;
+                background-color: transparent;
+                height: 90px;
+                position: absolute;
+                display: inline;
+                transform: rotate(-45deg);
+                left: -100px;
+                transition: 2s;
+                box-shadow: 1px 0px 40px 5px rgba(255, 255, 255, 0.856);
+            }
+            button:nth-child(10):hover .camada span{
+                left: 120%;
+            }
+            
+        </style>
+    </body>
+
+</html>

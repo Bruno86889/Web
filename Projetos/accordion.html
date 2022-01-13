@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="acordion">
+                <div class="section" onclick="show(this)">
+                    <p>Seção 1</p>
+                </div>
+                <div class="hide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Nemo, sapiente doloribus. Incidunt vitae commodi nemo
+                        inventore qui alias quo voluptatum cupiditate
+                        necessitatibus. Doloribus quo maxime neque mollitia a
+                        nulla sapiente.</p>
+                </div>
+            </div>
+            <div class="acordion">
+                <div class="section" onclick="show(this)">
+                    <p>Seção 2</p>
+                </div>
+                <div class="hide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Nemo, sapiente doloribus. Incidunt vitae commodi nemo
+                        inventore qui alias quo voluptatum cupiditate
+                        necessitatibus. Doloribus quo maxime neque mollitia a
+                        nulla sapiente.</p>
+                </div>
+            </div>
+            <div class="acordion">
+                <div class="section" onclick="show(this)">
+                    <p>Seção 3</p>
+                </div>
+                <div class="hide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Nemo, sapiente doloribus. Incidunt vitae commodi nemo
+                        inventore qui alias quo voluptatum cupiditate
+                        necessitatibus. Doloribus quo maxime neque mollitia a
+                        nulla sapiente.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            @import url("../css/main.css");
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                width: 80vw;
+                height: 80vh;
+            }
+
+            .container .acordion {
+                width: 100%;
+                height: max-content;
+                display: inline;
+            }
+
+            .container .acordion .section {
+                background-color: blanchedalmond;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                padding: 0px 10px;
+                user-select: none;
+                cursor: pointer;
+            }
+
+            .container .acordion>div {
+                text-align: justify;
+                padding: 10px;
+            }
+
+            .container .acordion .hide {
+                display: none;
+            }
+        </style>
+
+        <script>
+            const section = document.getElementsByClassName("section")
+            const hide = document.querySelectorAll(".section .hide")
+            function show(e) {
+                if (e.nextElementSibling.className == "hide") {
+                    e.nextElementSibling.className = "show"
+                } else {
+                    e.nextElementSibling.className = "hide"
+                }
+            }
+        </script>
+    </body>
+
+</html>

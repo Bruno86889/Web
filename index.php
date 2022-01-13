@@ -16,36 +16,24 @@
         $files = scandir($path);
         foreach ($files as $key => $value) {
 
-            $name = basename($value,".html");
+            $name = basename($value, ".html");
 
             if ($value != "." and $value != "..") {
                 echo "<li class='item'><a href='{$path}{$value}' target='_blank' rel='noopener noreferrer'>$name</a></li>";
             }
-           
-        }?>
+        } ?>
     </ul>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'poppins';
-            font-weight: normal;
+        @import url("css/main.css");
+        ul.list-files{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
         }
-
-        .list-files {
-            margin-left: 50px;
-            list-style-type: circle;
-        }
-
-        .list-files a {
-            text-decoration: none;
-            text-transform: capitalize;
-        }
-
-        .list-files a:hover {
-            text-decoration: underline;
+        ul.list-files .item{
+            width: 200px;
+            height: 100px;
         }
     </style>
     <script src="https://kit.fontawesome.com/a222d5ef66.js" crossorigin="anonymous"></script>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="25px" height="27px" viewBox="0 0 25 27" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 10.4348C0 4.67181 4.47716 0 10 0C15.5229 0 20 4.67181 20 10.4348C20 16.1978 15.5229 20.8696 10 20.8696C4.47716 20.8696 0 16.1978 0 10.4348Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="buscar" transform="translate(0.5 0.5)">
+    <g id="Ellipse">
+      <g clip-path="url(#clip_1)">
+        <use xlink:href="#path_1" fill="none" stroke="#FFFFFF" stroke-width="2" />
+      </g>
+    </g>
+    <path d="M16.5 18.1696L23.5 25.1696" id="New-shape-2" fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+  </g>
+</svg>
