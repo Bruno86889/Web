@@ -1,0 +1,64 @@
+@import url("../../css/main.css");
+body{
+    overflow-x: hidden;
+    user-zoom: 0;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 270;
+    position: sticky;
+    overflow-x: hidden;
+    padding: 5px 10px 0 10px;
+    top: 0;
+}
+nav .logo{
+    font-size: 18pt;
+    line-height: 0.9;
+    width: 100px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+nav .items{
+    width: max-content;
+    position: absolute;
+    left: 30%;
+}
+nav .items a{
+    color: white;
+    height: max-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: max-content;
+    padding: 5px 10px;
+    position: relative;
+    margin-left: 10px;
+}
+nav .items a:last-child{
+    margin-left: 0;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    z-index: -1;
+}
+section:nth-child(2){
+   background: black;
+   height: calc(100vh - 50px);
+}
+section:nth-child(3){
+    background: white;
+}
+section:nth-child(4){
+    background-color: black;
+}

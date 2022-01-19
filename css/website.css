@@ -1,0 +1,31 @@
+
+*{
+    font-family: "Nunito";
+    font-size: 20pt;
+    padding: 0;
+    margin: 0;
+    zoom: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overscroll-behavior: none;
+}
+nav{
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    background-color: burlywood;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: cadetblue;
+    width: 10px;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
