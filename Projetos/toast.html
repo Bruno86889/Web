@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast</title>
+</head>
+<body>
+    <Button>Me Clique</Button>
+
+    <div class="toast-container">
+    </div>
+    
+
+    <style>
+        @import url("../css/main.css");
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            padding: 5px 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .toast-container{
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(-50%);
+        }
+        span.toast {
+            background-color: chocolate;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 10px;
+            animation: remove 4s ease-in;
+        }
+
+        @keyframes remove {
+            0%{
+                opacity: 1;
+            }
+            
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script>
+        const cont = document.getElementsByClassName("toast-container")[0]
+
+        const btn = document.getElementsByTagName("button")[0]
+
+        btn.addEventListener("click",()=>{
+            var toast = document.createElement("span")
+            toast.className = "toast"
+
+            toast.textContent = "Olá você não deveria estar aqui"
+
+            cont.appendChild(toast)
+
+            setInterval(()=>{
+                toast.remove()
+
+            },3900)
+        })
+    </script>
+</body>
+</html>
