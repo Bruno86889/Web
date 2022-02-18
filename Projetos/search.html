@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Bar</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description"
-            content="Barra de pesquisa que pode ser escondida.">
-        <title>Barra de Pesquisa</title>
-    </head>
+    <script src="https://kit.fontawesome.com/a222d5ef66.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" name="text" list="text">
+        <i class="fas fa-search"></i>
+    </div>
 
-    <body>
-        <div class="container">
+    <style>
+        :root{
+            --bar-width: 100px;
+            --btn-width: 30px;
+            --font-size: 10pt;
+        }
+        .search-bar{
+            min-width: var(--bar-width);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: .5px solid black;
+        }
 
+        .search-bar input{
+            width: calc(var(--bar-width) - var(--btn-width));
+            border: none;
+            outline: none;
+            font-size: var(--font-size);
+        }
 
+        .search-bar i{
+            width: var(--btn-width);
+            height: var(--btn-width);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 
-            <div class="busca">
-                <input type="text" name="" id="">
-            </div>
-            <div class="icone" onclick="mudar()">
-                <i class="fas fa-search"></i>
-            </div>
-        </div>
+    <script>
 
-        <style>
-            @import url("../css/main.css");
+        var char, px = 0
+        const root = document.querySelector(":root")
+        const inp = document.getElementsByTagName("input")[0]
 
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        var minWidth = getComputedStyle(root).getPropertyValue("--bar-width")
+
+        inp.addEventListener("input",(e)=>{
+            char = inp.value.length
+            if (char > 9) {
+                inp.style.width = "fit-content"
+            }else{
+                inp.style.width = minWidth
             }
+        })
+        
 
-            .container {
-                width: max-content;
-                height: 40px;
-                display: flex;
-            }
 
-            .busca {
-                width: 0;
-                height: 40px;
-                transition: 0.8s;
-            }
 
-            .busca input {
-                width: 100%;
-                height: 40px;
-                outline: none;
-                padding: 5px;
-                border: 1px solid rgba(0, 0, 0, 0.274);
-                border-right: none;
-                overflow: hidden;
-                font: 12pt;
-            }
-
-            .icone {
-                width: 40px;
-                height: 40px;
-                background-color: rgb(103, 103, 243);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                cursor: pointer;
-            }
-        </style>
-        </script>
-        <script src="https://kit.fontawesome.com/a222d5ef66.js"
-            crossorigin="anonymous"></script>
-        <script>
-
-            const icone = document.getElementsByTagName("i")
-            const busca = document.getElementsByClassName("busca")
-            const inp = document.getElementsByTagName("input")
-
-            function mudar() {
-                // Verifica a classe do elemento <i>
-                if (icone[0].className.includes("search")) {
-                    icone[0].className = "fas fa-times"
-                    busca[0].style.width = "200px"
-                } else {
-                    icone[0].className = "fas fa-search"
-                    busca[0].style.width = "0px"
-                    inp[0].value = ""
-                }
-
-            }
-        </script>
-    </body>
-
+    </script>
+</body>
 </html>

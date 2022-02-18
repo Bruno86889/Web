@@ -11,7 +11,9 @@
     <body>
         <div class="container">
             <button>Clique em mim</button>
-            <button><div class="camada">Clique em mim <span></span></div></button>
+            <button>
+                <div class="camada">Clique em mim <span></span></div>
+            </button>
             <button>Clique em mim</button>
             <button>Clique em mim</button>
             <button>Clique em mim</button>
@@ -21,7 +23,8 @@
                 <div class="glass">Clique em mim</div>
             </button>
             <button>Clique em mim</button>
-            <button><div class="camada">Clique em mim <span></span></div>
+            <button>
+                <div class="camada">Clique em mim <span></span></div>
             </button>
             <button>Clique em mim</button>
             <button>Clique em mim</button>
@@ -37,12 +40,16 @@
         <style>
             @import url("../css/main.css");
 
+            * {
+                overflow: hidden;
+            }
+
             .container {
                 background-image: url("../assets/img/img4.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                min-height: 100%;
+                min-height: 100vh;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -51,15 +58,22 @@
                 padding: 10px;
                 background-color: rgb(255, 177, 177);
             }
+
             @media only screen and (max-width:700px) {
-                .container{
+                .container {
                     grid-template-columns: 1fr 1fr 1fr;
                 }
+
+                button, button>div {
+                    font-size: 10pt;
+                    max-width: 180px;
+                }
             }
+
             button {
                 width: 200px;
                 height: 40px;
-                margin-right: 10px;
+                margin: 10px;
                 /* padding: 10px 20px; */
                 text-transform: uppercase;
                 border: none;
@@ -80,7 +94,8 @@
                 box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.212), -3px -3px 6px rgba(255, 255, 255, 0.342);
                 display: flex;
             }
-            button:nth-child(2) .camada{
+
+            button:nth-child(2) .camada {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -91,7 +106,8 @@
                 letter-spacing: 3px;
                 backdrop-filter: blur(5px);
             }
-            button:nth-child(2) .camada span{
+
+            button:nth-child(2) .camada span {
                 width: 0px;
                 background-color: transparent;
                 height: 90px;
@@ -102,7 +118,8 @@
                 transition: 0.7s;
                 box-shadow: 1px 0px 40px 5px rgba(255, 255, 255, 0.562);
             }
-            button:nth-child(2):hover .camada span{
+
+            button:nth-child(2):hover .camada span {
                 left: 120%;
             }
 
@@ -117,7 +134,7 @@
                 transition: 1s;
             }
 
-            button:nth-child(3):hover{
+            button:nth-child(3):hover {
                 background-position: 100% 0%;
             }
 
@@ -129,7 +146,8 @@
                 background-size: 100% 200%;
                 transition: 1s;
             }
-            button:nth-child(4):hover{
+
+            button:nth-child(4):hover {
                 background-position: 100% 100%;
             }
 
@@ -194,12 +212,13 @@
             }
 
 
-            button:nth-child(10){
+            button:nth-child(10) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            button:nth-child(10) .camada{
+
+            button:nth-child(10) .camada {
                 background: rgb(255, 0, 0);
                 display: flex;
                 justify-content: center;
@@ -211,7 +230,8 @@
                 color: white;
                 letter-spacing: 3px;
             }
-            button:nth-child(10) .camada span{
+
+            button:nth-child(10) .camada span {
                 width: 0px;
                 background-color: transparent;
                 height: 90px;
@@ -222,10 +242,10 @@
                 transition: 2s;
                 box-shadow: 1px 0px 40px 5px rgba(255, 255, 255, 0.856);
             }
-            button:nth-child(10):hover .camada span{
+
+            button:nth-child(10):hover .camada span {
                 left: 120%;
             }
-            
         </style>
     </body>
 

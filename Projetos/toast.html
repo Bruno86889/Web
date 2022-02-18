@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toast</title>
+    <script src="../js/jquery-3.6.0.js"></script>
 </head>
 <body>
     <Button>Me Clique</Button>
@@ -54,22 +55,23 @@
     </style>
 
     <script>
-        const cont = document.getElementsByClassName("toast-container")[0]
+        const cont = $(".toast-container")
 
-        const btn = document.getElementsByTagName("button")[0]
+        const btn = $("button")
 
-        btn.addEventListener("click",()=>{
-            var toast = document.createElement("span")
-            toast.className = "toast"
+        btn.click(()=>{
+            let toast = $("<span></span>")
 
-            toast.textContent = "Olá você não deveria estar aqui"
+            toast.addClass("toast")
+            toast.text("Olá, você não deveria estar aqui")
 
-            cont.appendChild(toast)
-
+            toast.appendTo(cont)
+            
             setInterval(()=>{
                 toast.remove()
-
+                delete toast
             },3900)
+            
         })
     </script>
 </body>

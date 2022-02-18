@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Accordion</title>
     </head>
+    <script src="../js/jquery-3.6.0.js"></script>
 
     <body>
         <div class="container">
             <div class="acordion">
-                <div class="section" onclick="show(this)">
+                <div class="section">
                     <p>Seção 1</p>
                 </div>
                 <div class="hide">
@@ -23,7 +24,7 @@
                 </div>
             </div>
             <div class="acordion">
-                <div class="section" onclick="show(this)">
+                <div class="section">
                     <p>Seção 2</p>
                 </div>
                 <div class="hide">
@@ -35,7 +36,7 @@
                 </div>
             </div>
             <div class="acordion">
-                <div class="section" onclick="show(this)">
+                <div class="section" >
                     <p>Seção 3</p>
                 </div>
                 <div class="hide">
@@ -87,18 +88,19 @@
             .container .acordion .hide {
                 display: none;
             }
+
+            .section p{
+                pointer-events: none;
+            }
         </style>
 
         <script>
-            const section = document.getElementsByClassName("section")
-            const hide = document.querySelectorAll(".section .hide")
-            function show(e) {
-                if (e.nextElementSibling.className == "hide") {
-                    e.nextElementSibling.className = "show"
-                } else {
-                    e.nextElementSibling.className = "hide"
-                }
-            }
+           $(document).ready(()=>{
+               $(".section").click((e)=>{
+                   
+                   $(e.target).siblings(".hide").toggle()
+               })
+           })
         </script>
     </body>
 

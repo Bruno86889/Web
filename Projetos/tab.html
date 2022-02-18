@@ -6,25 +6,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tab</title>
+        <script src="../js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
         <div class="tab-container">
             <div class="tab-nav">
-                <div class="tab-btn active" tab="0" onclick="changeTab(this)">Tab 1
+                <div class="tab-btn active">Tab 1
                 </div>
-                <div class="tab-btn" tab="1" onclick="changeTab(this)">Tab 2</div>
-                <div class="tab-btn" tab="2" onclick="changeTab(this)">Tab 3</div>
+                <div class="tab-btn">Tab 2</div>
+                <div class="tab-btn">Tab 3</div>
+                <div class="tab-btn">Tab 4</div>
             </div>
             <div class="tab-content">
                 <div class="tab active">
-                    <p>Esse é o Tab 1</p>
+                    <p>Oi, aqui é o Tab 1</p>
                 </div>
                 <div class="tab">
-                    <p>Esse é o Tab 2</p>
+                    <h1>Sou o Tab 2</h1>
                 </div>
                 <div class="tab">
-                    <p>Esse é o Tab 3</p>
+                    <h2>Me chamo Tab 3</h2>
+                </div>
+                <div class="tab">
+                    <h6>Isso mesmo, sou o Tab 4</h6>
                 </div>
             </div>
         </div>
@@ -89,31 +94,24 @@
         </style>
 
         <script>
+            const tab = $(".tab")
+            const btns = $(".tab-btn")
+            var current = 0
 
-            function changeTab(e) {
-                function addActive(e) {
-                    e.className += " active"
-                }
-                function removeActive(e, className) {
+            $.each(btns,(i,v)=>{
+                $(v).click((e)=>{
+                    btns.removeClass("active")
+                    $(e.target).toggleClass("active")
+                    current = i
 
-                    for (let i = 0; i < e.length; i++) {
-                        e[i].className = className
-                    }
-                }
-                let tabs = document.getElementsByClassName("tab")
-                let btns = document.getElementsByClassName("tab-btn")
-
-                if (e.className.includes("active")) {
-                    removeActive(e, "tab-btn")
-
-                } else {
-                    removeActive(btns, "tab-btn")
-                    addActive(e)
-                    removeActive(tabs, "tab")
-                    addActive(tabs[e.getAttribute("tab")])
-                }
-            }
-
+                    tab.each((i,el)=>{
+                        $(el).removeClass("active")
+                        if (i == current) {
+                            $(el).toggleClass("active")
+                        }
+                    })
+                })
+            })
 
         </script>
     </body>
