@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Bar</title>
+    <script src="../js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div class="screen" style="background: whitesmoke;"></div>
+    <div class="screen" style="background: yellow"></div>
+    <div class="screen" style="background: red;"></div>
+    <div id="target" class="screen" style="background: blue;"></div>
+    <div class="screen" style="background: violet;"></div>
+    <style>
+        @import url("../css/main.css");
+        body{
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar{
+            -webkit-appearance: none;
+            width: 10px;
+        }
+        body::-webkit-scrollbar-button{
+            -webkit-appearance: none;
+            width: inherit;
+            height: 2px;
+            background-color: lawngreen;
+        }
+        ::-webkit-scrollbar-thumb{
+            -webkit-appearance: none;
+            width: inherit;
+            background-color: lightcoral;
+            height: 10px;
+            
+        }
+        ::-webkit-scrollbar-track{
+            background-color: lightgoldenrodyellow;
+        }
+        .screen{
+            height: 100vh;
+        }
+    </style>
+
+    <script>
+        
+    </script>
+</body>
+</html>

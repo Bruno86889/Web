@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bruno",
+        "age": 18,
+        "commits": ["Achei interessante","Fabuloso!","Sem comentários"]
+    },
+    {
+        "name": "Paulo",
+        "age": 22,
+        "commits": ["Legal"]
+    },
+    {
+        "name": "Julia",
+        "age": 16,
+        "commits": ["Não entendi","Sem comentários"]
+    },
+    {
+        "name": "Julia",
+        "age": 16,
+        "commits": ["Não entendi","Sem comentários"]
+    },
+    {
+        "name": "Julia",
+        "age": 16,
+        "commits": ["Não entendi","Sem comentários"]
+    },
+    {
+        "name": "Julia",
+        "age": 16,
+        "commits": ["Não entendi","Sem comentários"]
+    }
+]

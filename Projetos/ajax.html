@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax</title>
+
+        <script src="../js/jquery-3.6.0.js"></script>
+    </head>
+
+    <body>
+        <ul class="commit-list">
+
+        </ul>
+
+
+        <style>
+            @import url("../css/main.css");
+
+            :where(ul, li) {
+                list-style: none;
+            }
+
+            ul.commit-list {
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+            li.commit {
+                height: 300px;
+                background-color: rgba(155, 217, 219, 0.459);
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377);
+            }
+
+            li.commit {
+                /* 374 */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li.commit li {
+                width: 100%;
+                height: max-content;
+                margin-top: 10px;
+            }
+        </style>
+
+        <script>
+            var d
+            $(document).ready(() => {
+                $.getJSON("../assets/json/persons.json").then((data, status) => {
+                    $.each(Object.keys(data), (i) => {
+                        var li = $("<li></li>", {
+                            class: "commit",
+                            value: i
+                        })
+                        $("<h3></h3>", { text: data[i].name }).appendTo(li)
+                        $("<h4></h4>", { text: data[i].age }).appendTo(li)
+
+                        var commits = $("<ul></ul>", { class: "person-commits" })
+
+
+                        $.each(Object.keys(data[i].commits), (ind) => {
+                            $("<p></p>", {
+                                text: data[i].commits[ind]
+                            }).appendTo(commits)
+                        })
+
+                        commits.appendTo(li)
+
+                        li.appendTo($("ul.commit-list"))
+                    })
+                })
+            })
+
+        </script>
+    </body>
+
+</html>
