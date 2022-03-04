@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagination</title>
+        <script src="../js/jquery-3.6.0.js"></script>
+    </head>
+
+    <body>
+        <div class="pagination">
+            <a class="page-controller">
+                < </a>
+            <ul class="pages"></ul>
+            <a class="page-controller">></a>
+        </div>
+
+        <style>
+            @import url("../css/main.css");
+
+            body {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .pagination {
+                width: max-content;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+            }
+
+            .pagination>ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                list-style: none;
+            }
+
+            ul>li, .page-controller {
+                font-size: 12pt;
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 4px;
+            }
+
+            ul>li>a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: black;
+                user-select: none;
+                pointer-events: all;
+            }
+
+            ul>.page-controller {
+                font-size: 14pt;
+            }
+
+            ul>li:hover, .page-controller:hover {
+                background-color: cadetblue;
+            }
+        </style>
+
+        <script>
+            var pages = $(".pages")
+            var urls = ["item1", "item2", "item3"]
+            var page, link
+
+            $.each(urls, (ind, val) => {
+                link = $("<a></a>",{
+                    text: ind+1,
+                    href: val
+                })
+                page = $("<li></li>")
+
+                page.append(link)
+
+                pages.append(page)
+            })
+
+
+        </script>
+    </body>
+
+</html>

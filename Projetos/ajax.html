@@ -18,7 +18,11 @@
 
         <style>
             @import url("../css/main.css");
-
+            body{
+                overflow: hidden;
+                width: 100vw;
+                height: 100vh;
+            }
             :where(ul, li) {
                 list-style: none;
             }
@@ -29,9 +33,14 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-                grid-gap: 20px;
+                grid-gap: 10px;
             }
-
+            img.icon{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-top: 5px;
+            }
             li.commit {
                 height: 300px;
                 background-color: rgba(155, 217, 219, 0.459);
@@ -53,7 +62,7 @@
         </style>
 
         <script>
-            var d
+            const path = "../assets/img/"
             $(document).ready(() => {
                 $.getJSON("../assets/json/persons.json").then((data, status) => {
                     $.each(Object.keys(data), (i) => {
@@ -61,6 +70,10 @@
                             class: "commit",
                             value: i
                         })
+                        $("<img />",{
+                            class: "icon",
+                            src: path + data[i].avatar
+                        }).appendTo(li)
                         $("<h3></h3>", { text: data[i].name }).appendTo(li)
                         $("<h4></h4>", { text: data[i].age }).appendTo(li)
 

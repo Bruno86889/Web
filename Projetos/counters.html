@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testes de componentes</title>
+    </head>
+
+    <body>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <style>
+            @import url("../css/main.css");
+            body{
+                height: 100vh;
+                background-color: rgb(102, 58, 58);
+                counter-reset: x;
+            }
+            p::after{
+                counter-set: 2;
+                
+                counter-increment: x;
+                content: counter(x) "-";
+            }
+        </style>
+    </body>
+
+</html>

@@ -1,32 +1,38 @@
 [
     {
         "name": "Bruno",
+        "avatar": "img6.jpg" ,
         "age": 18,
         "commits": ["Achei interessante","Fabuloso!","Sem comentários"]
     },
     {
         "name": "Paulo",
+        "avatar": "img7.jpg" ,
         "age": 22,
         "commits": ["Legal"]
     },
     {
         "name": "Julia",
+        "avatar": "img3.jpg" ,
         "age": 16,
         "commits": ["Não entendi","Sem comentários"]
     },
     {
-        "name": "Julia",
-        "age": 16,
-        "commits": ["Não entendi","Sem comentários"]
+        "name": "Pedro",
+        "avatar": "img2.jpg" ,
+        "age": 44,
+        "commits": ["Bem interessante, porém sem utilidade"]
     },
     {
-        "name": "Julia",
-        "age": 16,
-        "commits": ["Não entendi","Sem comentários"]
+        "name": "Yasmin",
+        "avatar": "img4.jpg" ,
+        "age": 6,
+        "commits": ["Não entendi"]
     },
     {
-        "name": "Julia",
-        "age": 16,
-        "commits": ["Não entendi","Sem comentários"]
+        "name": "Ashley",
+        "avatar": "img5.jpg" ,
+        "age": 24,
+        "commits": ["Falta estilo!"]
     }
 ]
