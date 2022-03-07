@@ -1,12 +1,13 @@
-*{
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins',sans-serif;
+   
     overscroll-behavior: none;
     zoom: unset;
-}
-html{
     width: 100vw;
     height: 100vh;
+}
+*{
+    font-family: 'poppins',sans-serif;
 }

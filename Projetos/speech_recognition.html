@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reconehcimento de cor</title>
+    </head>
+
+    <body>
+
+        <div class="recognition">
+            <div class="recorder">
+                <button>
+                    <span></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z"/></svg></button>
+            </div>
+    
+            <p id="result"></p>
+        </div>
+        
+
+        <style>
+            @import url("../css/main.css");
+            .recognition{
+                width: 300px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%,-25%);
+                flex-direction: column;
+            }
+            .recorder{
+                width: 100px;
+                height: max-content;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+            .recorder > button{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(206, 59, 59);
+                outline: none;
+                border: none;
+                transition: 1s;
+                cursor: pointer;
+                animation: expand 5s ease infinite;
+            }
+            .recorder > button:hover{
+                background-color: rgb(199, 7, 7);
+            }
+            p{
+                text-align: center;
+                color: rgb(32, 28, 28);
+            }
+            svg{
+                width: 30px;
+                height: 30px;
+                fill: white;
+            }
+
+        </style>
+        <script>
+
+            var colors = {
+                amarelo: "yellow",
+                vermelho: "red",
+                azul: "blue",
+                preto: "black",
+                rosa: "pink",
+                roxo: "purple",
+                laranja: "orange",
+                branco: "white",
+                marrom: "brown",
+                dourado: "gold",
+                prateado: "silver",
+                verde: "green",
+                violeta: "violet",
+                cinza: "gray"
+            }
+
+            const recognition = new webkitSpeechRecognition()
+            const speechList = new webkitSpeechGrammarList()
+            const s_btn = document.getElementsByTagName("button")[0]
+            const output = document.getElementById("result")
+
+            // speechList.addFromString(grammar)
+            recognition.grammar = speechList
+            // Linguagem do reconehcimento de voz, se não especificado, será o mesmo que a de <html lang>
+            recognition.lang = "pt-br"
+
+            // Controla se apenas retornará um resultado ou se ficará esperando mais resultados
+            recognition.continuous = false
+
+            // Controla se vai retornar resultados que não sejam o resultado final da análise de voz
+            recognition.interimResults = false
+
+            // Controla o número máximo de resultados obtidos pela análise de voz
+            recognition.maxAlternatives = 1
+
+            s_btn.onclick = function () {
+                recognition.start()
+                console.log("Gravação Iniciada!");
+            }
+
+            recognition.onspeechend = function () {
+                recognition.stop()
+                console.log("Gravação Encerrada!");
+            }
+
+            recognition.onresult = function (e) {
+                var color = e.results[0][0].transcript
+                color = color.toLowerCase().replace("?", "")
+                var a = ""
+
+                for (let x = 0; x < Object.keys(colors).length; x++) {
+                    if (color.includes(Object.keys(colors)[x])) {
+                        document.body.style.backgroundColor = colors[Object.keys(colors)[x]]
+                        break
+                    }
+                }
+                output.textContent = color
+            }
+        </script>
+    </body>
+
+</html>
