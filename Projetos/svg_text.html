@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Texto variavel animado com SVG">
+        <title>Texto animado em SVG</title>
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/svg-text.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="formulario">
+                <input type="texto" name="texto" id="inp">
+                <button id="btn" onclick="mudarTexto()">Adicionar</button>
+            </div>
+            <div class="texto">
+                <svg width="100px" height="100px">
+                    <text id="texto" x="50%" y="50%" fill="blue"
+                        text-anchor="middle"></text>
+                </svg>
+            </div>
+        </div>
+
+        <script src="../js/svg-text.js"></script>
+    </body>
+
+</html>

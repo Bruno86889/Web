@@ -1,0 +1,45 @@
+.recognition{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+    flex-direction: column;
+}
+.recorder{
+    width: 100px;
+    height: max-content;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.recorder > button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(206, 59, 59);
+    outline: none;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    animation: expand 5s ease infinite;
+}
+.recorder > button:hover{
+    background-color: rgb(199, 7, 7);
+}
+p{
+    text-align: center;
+    color: rgb(32, 28, 28);
+}
+svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+}

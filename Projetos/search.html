@@ -1,77 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Bar</title>
 
-    <script src="https://kit.fontawesome.com/a222d5ef66.js" crossorigin="anonymous"></script>
-    <script src="./js/jquery-3.6.0.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    <div class="search-bar">
-        <input type="text" name="text" list="text">
-        <i class="fas fa-search"></i>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Search Bar</title>
 
-    <style>
-        :root{
-            --bar-width: 100px;
-            --btn-width: 30px;
-            --font-size: 10pt;
-        }
-        .search-bar{
-            min-width: var(--bar-width);
-            display: flex;
-            align-items: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            border: .5px solid black;
-        }
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/search.css">
+    </head>
 
-        .search-bar input{
-            width: calc(var(--bar-width) - var(--btn-width));
-            border: none;
-            outline: none;
-            font-size: var(--font-size);
-        }
+    <body>
+        <div class="search-bar">
+            <input type="text" name="text" list="text">
+            <i class="fas fa-search"></i>
+        </div>
 
-        .search-bar i{
-            width: var(--btn-width);
-            height: var(--btn-width);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: blue;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+        <script src="../js/search.js"></script>
+        <script src="https://kit.fontawesome.com/a222d5ef66.js"crossorigin="anonymous"></script>
+        <script src="../js/jquery-3.6.0.js"></script>
+    </body>
 
-    <script>
-
-        var char, px = 0
-        const root = document.querySelector(":root")
-        const inp = document.getElementsByTagName("input")[0]
-
-        var minWidth = getComputedStyle(root).getPropertyValue("--bar-width")
-
-        inp.addEventListener("input",(e)=>{
-            char = inp.value.length
-            if (char > 9) {
-                inp.style.width = "fit-content"
-            }else{
-                inp.style.width = minWidth
-            }
-        })
-        
-
-
-
-    </script>
-</body>
 </html>

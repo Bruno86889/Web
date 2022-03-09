@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const URL_TO_FETCH = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Winter_Olympic_mascots_at_Beitucheng_Intersection_%2820220202120849%29_%28cropped%29.jpg/188px-Winter_Olympic_mascots_at_Beitucheng_Intersection_%2820220202120849%29_%28cropped%29.jpg'
+
+        
+        fetch(URL_TO_FETCH,{
+            method: "get"
+        }).then(function(response){
+            response.blob().then(function(result){
+                console.log(result.type);
+                var image = new Image()
+                image.src = URL.createObjectURL(result)
+                document.body.appendChild(image)
+            })
+        })
+
+    </script>
+</body>
+</html>

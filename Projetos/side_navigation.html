@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Side Navigation</title>
 
-    <script src="../js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/side-navigation.css">
+
 </head>
 <body>
     <nav>
@@ -52,57 +54,6 @@
         </div>
     </nav>
 
-    <style>
-        @import url("../css/main.css");
-        body{
-            width: 100vw;
-            height: 100vh;
-        }
-
-        /* Navigation */
-        nav{
-            background-color: blueviolet;
-            width: max-content;
-        }
-
-        /* Item */
-        .item{
-            display: flex;
-            align-items: center;
-            justify-content: baseline;
-            height: 50px;
-            width: 100%;
-            transition: 0.8s;
-            cursor: pointer;
-            
-        }
-        .item:hover{
-            background-color: burlywood;
-        }
-
-        /* Icons */
-        .icon{
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Text */
-        .text{
-            height: 100%;
-            width: calc(100% - 50px);
-            background: aliceblue;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* SVG */
-        svg{
-            fill: white;
-        }
-
-    </style>
+    <script src="../js/jquery-3.6.0.js"></script>
 </body>
 </html>

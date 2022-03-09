@@ -1,0 +1,30 @@
+body{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-button{
+    -webkit-appearance: none;
+    width: inherit;
+    height: 2px;
+    background-color: lawngreen;
+}
+
+::-webkit-scrollbar-thumb{
+    -webkit-appearance: none;
+    width: inherit;
+    background-color: lightcoral;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: lightgoldenrodyellow;
+}
+
+.screen{
+    height: 100vh;
+}

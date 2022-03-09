@@ -1,0 +1,40 @@
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+:where(ul, li) {
+    list-style: none;
+}
+
+.commit-list {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+.icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.commit {
+    height: 300px;
+    background-color: rgba(155, 217, 219, 0.459);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.377);
+}
+
+.commit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commit li {
+    width: 100%;
+    height: max-content;
+    margin-top: 10px;
+}

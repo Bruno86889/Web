@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.toast-container{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+}
+span.toast {
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 10px;
+    animation: remove 4s ease-in;
+}
+
+@keyframes remove {
+    0%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
+    }
+}

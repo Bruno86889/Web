@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index dos conteudos</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <h1>Projetos</h1>
+    <style>
+        h1{
+            font-size: x-large;
+            margin-bottom: 10px;
+        }
+        li{
+            list-style: square;
+            margin: 0 0 5px 20px;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        const dirname = "./Projetos/"
+        const list = document.createElement("ul")
+        const dataFilePath = "./assets/json/projects.json"
+
+        fetch(dataFilePath,{method: "get"}).then(text =>{
+            text.text().then(data =>{
+                const projects = JSON.parse(data)
+                
+                for(let index = 0; index < Object.keys(projects).length;index++){
+                    var item = document.createElement("li")
+                    var link = document.createElement("a")
+
+                    link.href = dirname + projects[index].filename
+                    link.text = projects[index].name
+                    item.appendChild(link)
+                    list.appendChild(item)
+                    document.body.appendChild(list)
+                }
+            })
+        })
+    </script>
+</body>
+</html>

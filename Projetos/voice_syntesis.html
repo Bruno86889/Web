@@ -5,11 +5,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Síntese de Voz</title>
+        <link rel="stylesheet" href="../css/main.css">
     </head>
 
     <body>
-
 
         <input type="text">
         <button>Falar</button>
@@ -26,23 +26,7 @@
             <option value="nl-NL">Alemão</option>
         </select>
 
-        <script>
-            const input = document.getElementsByTagName("input")[0]
-            const button = document.getElementsByTagName("button")[0]
-            const speech = window.speechSynthesis
-            const utterance = new SpeechSynthesisUtterance()
-            const select = document.getElementsByTagName("select")[0]
-            
-        
-            button.onclick = e => {
-                utterance.lang = select.value
-                utterance.text = input.value
-
-                if(!speech.speaking){
-                    speech.speak(utterance)
-                }   
-            }
-        </script>
+        <script src="../js/voice-syntesis.js"></script>
     </body>
 
 </html>

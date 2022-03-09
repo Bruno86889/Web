@@ -1,0 +1,33 @@
+:root{
+    --bar-width: 100px;
+    --btn-width: 30px;
+    --font-size: 10pt;
+}
+.search-bar{
+    min-width: var(--bar-width);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: .5px solid black;
+}
+
+.search-bar input{
+    width: calc(var(--bar-width) - var(--btn-width));
+    border: none;
+    outline: none;
+    font-size: var(--font-size);
+}
+
+.search-bar i{
+    width: var(--btn-width);
+    height: var(--btn-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
