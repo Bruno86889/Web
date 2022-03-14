@@ -1,0 +1,12 @@
+
+video{
+    width: 400px;
+    height: 90vh;
+}
+
+video::cue{
+    font-family: "poppins";
+    background-color: blue;
+    color: white;
+    font-size: 10pt;
+}

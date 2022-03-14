@@ -1,0 +1,12 @@
+WEBVTT - This file is a video description
+
+NOTE .vtt files support css3 styling
+NOTE with the pseudo-function ::cue we can change the cue 
+
+1
+00:00:01.000 --> 00:00:10.000 line:50%
+<b>Óla galera como estão?</b>
+
+2
+00:00:11.000 --> 00:00:19.000
+Neste vídeo apresento-les pinguins
