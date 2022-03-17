@@ -27,7 +27,7 @@
         const list = document.createElement("ul")
         const dataFilePath = "./assets/json/projects.json"
 
-        fetch(dataFilePath,{method: "get"}).then(text =>{
+        fetch(dataFilePath,{method: "post"}).then(text =>{
             text.text().then(data =>{
                 const projects = JSON.parse(data)
                 
