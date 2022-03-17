@@ -1,0 +1,36 @@
+.cursor{
+    --size: 20px;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    filter: invert(0%);
+    transform: translate(-50%,-50%);
+}
+body{
+    cursor: none;
+    display: flex;
+    overflow: hidden;
+    counter-reset: count;
+}
+
+
+p{
+    width: 100%;
+    height: max-content;
+    top: calc(40px * var(--i));    
+    position: relative;
+    font-size: 24pt;
+    font-weight: 900;
+
+}    
+div{
+    width: 12.5vw;
+    height: 100vh;
+    background-color: var(--color);
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+}
+

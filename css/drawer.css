@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    overscroll-behavior: none;
+    line-height: 1;
+    max-zoom: 1;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+}
+canvas{
+    border: 1px solid black;
+}
+
+#range{
+    width: 200px;
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+#range > div{
+    width: 1%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+}
+#range p{
+    color: beige;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    user-select: none;
+}

@@ -16,6 +16,18 @@
         "filename": "buttons.html"
     },
     {
+        "name":"canvas example",
+        "filename":"canvas.html"
+    },
+    {
+        "name":"mouse cursor",
+        "filename":"cursor.html"
+    },
+    {
+        "name":"drag and drop",
+        "filename":"drag_drop.html"
+    },
+    {
         "name": "fetch example",
         "filename": "fetch.html"
     },
