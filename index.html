@@ -28,7 +28,7 @@
         const dataFilePath = "./assets/json/projects.json"
 
         // as
-        fetch(dataFilePath,{method: "get"}).then(text =>{
+        fetch(dataFilePath,{method: "post"}).then(text =>{
             text.text().then(data =>{
                 const projects = JSON.parse(data)
                 
