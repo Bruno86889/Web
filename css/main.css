@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,7 +32,7 @@ body {
     zoom: unset;
     min-width: 100vw;
     min-height: 100vh;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Fredoka',sans-serif;
 }
 ol, ul {
 	list-style: none;

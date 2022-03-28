@@ -1,0 +1,30 @@
+table{
+    width: max-content;
+}
+
+thead{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: white;
+}
+
+th,td{
+    width: max-content;
+    padding: 5px 10px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+col:nth-child(1),col:nth-child(3){
+    background-color: rgb(210, 234, 241);
+}
+
+col:nth-child(2){
+    background-color: rgb(210, 204, 255);
+}
+
+tfoot td{
+    background: white;
+    border: none;
+}
