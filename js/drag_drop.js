@@ -1,21 +1,23 @@
-var drag = document.getElementById("drag")
+var drags = document.getElementsByClassName("drag")
 var drop = document.getElementById("drop")
 
-
-drag.addEventListener(
-    "dragstart", (e) => {
-        console.log(e.target);
-        e.dataTransfer.setData("text/plain", getComputedStyle(drag).getPropertyValue("background-color"))
-        e.dataTransfer.dropEffect = "copy"
-    })
+for (let i = 0; i < drags.length; i++) {
+    drags[i].addEventListener(
+        "dragstart", (e) => {
+            console.log(e.target);
+            e.dataTransfer.setData("text/plain", getComputedStyle(drags[i]).getPropertyValue("background"))
+            console.log(getComputedStyle(drags[i]).getPropertyValue("background"));
+            e.dataTransfer.dropEffect = "copy"
+        })
+}
 
 drop.addEventListener("dragover", (e) => {
     e.preventDefault()
     e.dataTransfer.dropEffect = "move"
 })
-drop.addEventListener("drop", (e) => {
-    e.preventDefault()
-    var bg = e.dataTransfer.getData("text")
 
-    drop.style.backgroundColor = bg
+drop.addEventListener("drop", (e) => {
+ 
+    var bg = e.dataTransfer.getData("text")
+    drop.style.background = bg
 })

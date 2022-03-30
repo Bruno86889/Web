@@ -1,3 +1,25 @@
+
+.music{
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.music-card img{
+    width: 300px;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+.title h4{
+    width: 300px;
+    height: max-content;
+}
+
 .range {
     width: 300px;
     height: 15px;
@@ -22,14 +44,14 @@
 }
 
 .range progress {
-    width: 99%;
+    width: 100%;
     height: 6px;
     -webkit-appearance: none;
 }
 
 .range progress::-webkit-progress-bar {
     -webkit-appearance: none;
-    background-color: white;
+    background-color: rgb(184, 133, 133);
     border-radius: 10px;
 }
 
@@ -37,4 +59,18 @@
     -webkit-appearance: none;
     background-color: black;
     border-radius: 10px 0 0 10px;
+}
+
+.time{
+    display: flex;
+    width: 300px;
+    height: 20px;
+    align-items: center;
+}
+
+.time div{
+    width: 50%;
+}
+.time div:last-child{
+    text-align: right;
 }

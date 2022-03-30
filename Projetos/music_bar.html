@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Range</title>
-        
+
 
         <!-- Carrega os recursos de CSS -->
         <link rel="stylesheet" href="../css/main.css">
@@ -15,14 +15,30 @@
     </head>
 
     <body>
-        <div class="range">
-            <input type="range" name="range" id="range" min="0" max="100"
-                step="1" value="0">
-            <progress id="progress" min="0" max="100" value="50"></progress>
+        <div class="music">
+            <div class="music-card">
+                <img src="../assets/img/img3.jpg" alt="" srcset="">
+            </div>
+            <div class="title">
+                <h4>The Hedgehog on table</h4>
+            </div>
+            <div class="range">
+                <input type="range" name="range" id="range" min="0" max="100"
+                    step="1" value="0">
+                <progress id="progress" min="0" max="100" value="50"></progress>
+            </div>
+            <div class="time">
+                <div>
+                    <p id="start">0:00</p>
+                </div>
+                <div>
+                    <p id="end">1:40</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Carrega JQUERY e recursos javascript -->
-        <script src="../js/jquery-3.6.0.js"></script>
+
         <script src="../js/music-bar.js"></script>
     </body>
 

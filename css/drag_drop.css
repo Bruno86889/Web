@@ -1,12 +1,29 @@
-#drag{
+
+.dragables{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.drag{
     width: 40px;
     height: 40px;
-    background: blue;
+    background: var(--bg);
     cursor: grab;
+   
+}
+.drag:nth-child(5){
+    background: url("../assets/img/img1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #drop{
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

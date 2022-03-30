@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/drag_drop.css">
-</head>
-<body>
-    <div id="drag" draggable="true"></div>
 
-    <div id="drop"></div>
-    <script src="../js/drag_drop.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/drag_drop.css">
+    </head>
+
+    <body>
+        
+        <div class="dragables">
+            <div class="drag" draggable="true" style="--bg: blue;"></div>
+            <div class="drag" draggable="true" style="--bg: yellow;"></div>
+            <div class="drag" draggable="true" style="--bg: red;"></div>
+            <div class="drag" draggable="true" style="--bg: orange;"></div>
+            <div class="drag" draggable="true" style='--bg: url("../assets/img/img2.jpg");'></div>
+            <div class="drag" draggable="true" style="--bg: linear-gradient(-45deg,white 0%,green 100%);"></div>
+            <div class="drag" draggable="true" style="--bg: linear-gradient(90deg, rgba(2,0,36,1) 5%, rgba(9,9,121,1) 35%, rgb(130, 196, 209) 100%);"></div>
+            <div class="drag" draggable="true" style="--bg: violet;"></div>
+            <div class="drag" draggable="true" style="--bg: salmon;"></div>
+            <div class="drag" draggable="true" style="--bg: pink;"></div>
+            <div class="drag" draggable="true" style="--bg: rgb(16, 214, 16);"></div>
+        </div>
+
+
+        <div id="drop"></div>
+        <script src="../js/drag_drop.js"></script>
+    </body>
+
 </html>
