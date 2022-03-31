@@ -1,15 +1,14 @@
-var pages = $(".pages")
-var urls = ["item1", "item2", "item3"]
-var page, link
+const pages = document.getElementsByClassName("pages")[0]
+const urls = ["item1", "item2", "item3"]
 
-$.each(urls, (ind, val) => {
-    link = $("<a></a>", {
-        text: ind + 1,
-        href: val
-    })
-    page = $("<li></li>")
+for(let i = 0; i< urls.length;i++){
+    let link = document.createElement("a")
+    let page = document.createElement("li")
 
-    page.append(link)
+    link.innerText = i + 1
+    link.href = urls[i]
 
-    pages.append(page)
-})
+    page.appendChild(link)
+    pages.appendChild(page)
+
+}
